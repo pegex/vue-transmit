@@ -37,7 +37,8 @@ class VTransmitFile {
 		start: undefined,
 		end: undefined,
 		time: undefined,
-	}
+  }
+  uploadUrl: string = undefined
 	webkitRelativePath: USVString = undefined
 	width: number = undefined
 	height: number = undefined

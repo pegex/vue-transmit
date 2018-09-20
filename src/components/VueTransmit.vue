@@ -572,7 +572,7 @@ export default class VueTransmit extends Vue {
 			file.xhr = xhr
 			file.startProgress()
 		}
-		xhr.open(this.method, this.url, true)
+		xhr.open(this.method, files[0].uploadUrl || this.url, true)
 		xhr.withCredentials = Boolean(this.withCredentials)
 		xhr.responseType = this.responseType
 
