@@ -23,6 +23,7 @@ declare class VTransmitFile {
     status: string;
     type: string;
     upload: IUploadStats;
+    uploadUrl: string;
     webkitRelativePath: USVString;
     width: number;
     height: number;

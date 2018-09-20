@@ -511,7 +511,7 @@ var VueTransmit = function (_Vue) {
                 }
             }
 
-            xhr.open(this.method, this.url, true);
+            xhr.open(this.method, files[0].uploadUrl || this.url, true);
             // Setting the timeout after open because of IE11 issue: https://gitlab.com/meno/dropzone/issues/8
             xhr.timeout = this.timeout;
             xhr.withCredentials = Boolean(this.withCredentials);
@@ -1393,7 +1393,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_VueTransmit_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_VueTransmit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_VueTransmit_vue__);
 /* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_VueTransmit_vue__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_VueTransmit_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_61e675b9_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_VueTransmit_vue__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_34e59ce8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_VueTransmit_vue__ = __webpack_require__(16);
 function injectStyle (ssrContext) {
   __webpack_require__(6)
 }
@@ -1413,7 +1413,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_VueTransmit_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_61e675b9_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_VueTransmit_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_34e59ce8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_VueTransmit_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -3319,6 +3319,7 @@ var VTransmitFile = function () {
             end: undefined,
             time: undefined
         };
+        this.uploadUrl = undefined;
         this.webkitRelativePath = undefined;
         this.width = undefined;
         this.height = undefined;
