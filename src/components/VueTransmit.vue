@@ -109,7 +109,7 @@ export default class VueTransmit extends Vue {
 	@Prop({ type: String, default: null })
 	dragClass: string
 
-	@Prop({ type: String, required: true })
+	@Prop({ type: String, required: false })
 	url: string
 
 	@Prop({ type: String, default: "post" })
